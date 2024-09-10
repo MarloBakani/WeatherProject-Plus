@@ -9,20 +9,20 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/styles.css" />
-    <link rel="script" href="src/index.js" />
-
     <title>My weather application</title>
   </head>
   <body>
     <div class="weather-app">
       <header>
-        <form id="searchform">
+        <form id="search-form">
           <input
             type="search"
             placeholder="Enter a city.."
             required
             class="search-input"
+            id="search-input"
           />
           <input type="submit" value="Search" class="search-button" />
         </form>
@@ -30,10 +30,9 @@
       <main>
         <div class="current-weather">
           <div>
-            <h1 class="current-city">Paris</h1>
+            <h1 class="current-city" id="current-city">Paris</h1>
             <p class="current-details">
-              <span id="current-time">Saturday 15:32</span>, moderate rain
-              <br />
+              <span id="current-date"></span>, moderate rain <br />
               Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
             </p>
           </div>
@@ -49,4 +48,5 @@
       </footer>
     </div>
   </body>
+  <script src="src/index.js"></script>
 </html>
